@@ -47,7 +47,7 @@
         android:layout_below="@+id/imageView"
         android:src="@drawable/bonfire"/>
 
-    <org.mdjarv.darksoulsmatchmaking.DarkSoulsTextView
+    <org.mdjarv.darksoulsmatchmaker.DarkSoulsTextView
         android:id="@+id/darkSoulsTextView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

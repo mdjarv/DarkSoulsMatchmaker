@@ -10,7 +10,7 @@
     android:orientation="horizontal" >
 
 
-    <org.mdjarv.darksoulsmatchmaking.DarkSoulsTextView
+    <org.mdjarv.darksoulsmatchmaker.DarkSoulsTextView
         android:id="@+id/minLevel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
         android:layout_gravity="center_vertical"
         android:src="@drawable/white_sign_soapstone" />
 
-    <org.mdjarv.darksoulsmatchmaking.DarkSoulsTextView
+    <org.mdjarv.darksoulsmatchmaker.DarkSoulsTextView
         android:id="@+id/maxLevel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
