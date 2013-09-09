@@ -1,13 +1,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".DarkSoulsMatchmaking"
-    android:background="#000000">
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context=".DarkSoulsMatchmaking"
+                android:background="#000000">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -16,56 +16,46 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:src="@drawable/darksouls_logo"
-        android:adjustViewBounds="true" />
+        android:adjustViewBounds="true"/>
 
-    <!-- ScrollView
+    <ListView
+        android:id="@id/android:list"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/scrollView"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/soullevelnumberpicker"
-        android:fillViewport="true" -->
+        tools:listitem="@layout/level_range"/>
 
-        <ListView
-            android:id="@id/android:list"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/soullevelnumberpicker" />
+    <NumberPicker
+        android:id="@+id/soullevelnumberpicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_below="@+id/imageView"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"/>
 
-    <!-- /ScrollView -->
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/android:list"
+        android:layout_alignLeft="@+id/darkSoulsTextView1"
+        android:layout_alignRight="@+id/darkSoulsTextView1"
+        android:layout_below="@+id/imageView"
+        android:src="@drawable/bonfire"/>
 
-        <NumberPicker
-            android:id="@+id/soullevelnumberpicker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignRight="@+id/imageView"
-            android:layout_below="@+id/imageView"
-            android:layout_marginRight="16dp"
-            android:orientation="vertical" />
-
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/android:list"
-            android:layout_alignLeft="@+id/darkSoulsTextView1"
-            android:layout_alignRight="@+id/darkSoulsTextView1"
-            android:layout_below="@+id/imageView"
-            android:src="@drawable/bonfire" />
-
-        <org.mdjarv.darksoulsmatchmaking.DarkSoulsTextView
-            android:id="@+id/darkSoulsTextView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/imageView"
-            android:layout_below="@+id/imageView"
-            android:layout_toLeftOf="@+id/soullevelnumberpicker"
-            android:gravity="top|center_horizontal"
-            android:text="Character Level"
-            android:textSize="20sp" />
+    <org.mdjarv.darksoulsmatchmaking.DarkSoulsTextView
+        android:id="@+id/darkSoulsTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_below="@+id/imageView"
+        android:layout_toLeftOf="@+id/soullevelnumberpicker"
+        android:gravity="top|center_horizontal"
+        android:text="Character Level"
+        android:textSize="20sp"/>
 
 </RelativeLayout>

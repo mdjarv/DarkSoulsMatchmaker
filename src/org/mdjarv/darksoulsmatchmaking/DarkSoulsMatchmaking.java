@@ -2,12 +2,7 @@ package org.mdjarv.darksoulsmatchmaking;
 
 import android.app.ListActivity;
 import android.os.Bundle;
-import android.app.Activity;
-import android.graphics.Typeface;
-import android.view.Menu;
-import android.widget.ListView;
 import android.widget.NumberPicker;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -34,8 +29,10 @@ public class DarkSoulsMatchmaking extends ListActivity implements NumberPicker.O
 
         calculateLevelRanges(levelNumberPicker.getValue());
 
-        // instantiate our ItemAdapter class
         m_adapter = new LevelRangeAdapter(this, R.layout.level_range, levelRanges);
+
+        this.getListView().addHeaderView(this.getLayoutInflater().inflate(R.layout.list_header, null));
+
         setListAdapter(m_adapter);
     }
 

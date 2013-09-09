@@ -25,7 +25,6 @@ public class LevelRangeAdapter extends ArrayAdapter<LevelRange> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        //return super.getView(position, convertView, parent);
         LevelRange levelRange = objects.get(position);
 
         // assign the view we are converting to a local variable
@@ -42,8 +41,8 @@ public class LevelRangeAdapter extends ArrayAdapter<LevelRange> {
         TextView maxLevel = (TextView) v.findViewById(R.id.maxLevel);
         ImageView imageView = (ImageView) v.findViewById(R.id.imageView);
 
-        minLevel.setText(""+levelRange.getMin());
-        maxLevel.setText(""+levelRange.getMax());
+        minLevel.setText("" + levelRange.getMin());
+        maxLevel.setText("" + levelRange.getMax());
         imageView.setImageResource(levelRange.getImageId());
 
         return v;

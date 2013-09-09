@@ -10,14 +10,13 @@
     android:orientation="horizontal" >
 
 
-    <TextView
+    <org.mdjarv.darksoulsmatchmaking.DarkSoulsTextView
         android:id="@+id/minLevel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_weight="1"
-        android:gravity="center_vertical|right"
-        android:paddingRight="16dp"
+        android:gravity="center_vertical|center_horizontal"
         android:text="1"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -28,14 +27,13 @@
         android:layout_gravity="center_vertical"
         android:src="@drawable/white_sign_soapstone" />
 
-    <TextView
+    <org.mdjarv.darksoulsmatchmaking.DarkSoulsTextView
         android:id="@+id/maxLevel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_weight="1"
-        android:gravity="center_vertical|left"
-        android:paddingLeft="16dp"
+        android:gravity="center_vertical|center_horizontal"
         android:text="10"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 </LinearLayout>
