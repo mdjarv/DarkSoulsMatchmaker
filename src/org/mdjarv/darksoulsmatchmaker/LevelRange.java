@@ -43,4 +43,9 @@ public class LevelRange {
     public void setImageId(int imageId) {
         this.imageId = imageId;
     }
+
+	public void copyRange(LevelRange range) {
+		this.min = range.getMin();
+		this.max = range.getMax();
+	}
 }
